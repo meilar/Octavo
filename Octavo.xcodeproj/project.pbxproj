@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B400E98282F13CA0024E2F6 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B400E97282F13CA0024E2F6 /* Book.swift */; };
+		0B400E9A282F17650024E2F6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B400E99282F17650024E2F6 /* CardView.swift */; };
 		0BF98F0F282ED4DE0029853C /* OctavoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F0E282ED4DE0029853C /* OctavoApp.swift */; };
 		0BF98F11282ED4DE0029853C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F10282ED4DE0029853C /* ContentView.swift */; };
 		0BF98F13282ED4E00029853C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF98F12282ED4E00029853C /* Assets.xcassets */; };
@@ -17,7 +19,8 @@
 		0BF98F2F282ED4E00029853C /* OctavoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F2E282ED4E00029853C /* OctavoUITests.swift */; };
 		0BF98F31282ED4E00029853C /* OctavoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F30282ED4E00029853C /* OctavoUITestsLaunchTests.swift */; };
 		0BF98F3E282ED6DB0029853C /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F3D282ED6DB0029853C /* HomeScreenView.swift */; };
-		0BF98F40282EE9650029853C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F3F282EE9650029853C /* SwiftUIView.swift */; };
+		0BF98F40282EE9650029853C /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F3F282EE9650029853C /* UserDetailView.swift */; };
+		0BF98F44282F12B40029853C /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F43282F12B40029853C /* BooksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B400E97282F13CA0024E2F6 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		0B400E99282F17650024E2F6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0BF98F0B282ED4DE0029853C /* Octavo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octavo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF98F0E282ED4DE0029853C /* OctavoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctavoApp.swift; sourceTree = "<group>"; };
 		0BF98F10282ED4DE0029853C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +56,8 @@
 		0BF98F2E282ED4E00029853C /* OctavoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctavoUITests.swift; sourceTree = "<group>"; };
 		0BF98F30282ED4E00029853C /* OctavoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctavoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0BF98F3D282ED6DB0029853C /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
-		0BF98F3F282EE9650029853C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		0BF98F3F282EE9650029853C /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		0BF98F43282F12B40029853C /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B400E96282F13A00024E2F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B400E97282F13CA0024E2F6 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0BF98F02282ED4DE0029853C = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +116,7 @@
 		0BF98F0D282ED4DE0029853C /* Octavo */ = {
 			isa = PBXGroup;
 			children = (
+				0B400E96282F13A00024E2F6 /* Models */,
 				0BF98F0E282ED4DE0029853C /* OctavoApp.swift */,
 				0BF98F10282ED4DE0029853C /* ContentView.swift */,
 				0BF98F12282ED4E00029853C /* Assets.xcassets */,
@@ -109,7 +124,9 @@
 				0BF98F19282ED4E00029853C /* Octavo.xcdatamodeld */,
 				0BF98F14282ED4E00029853C /* Preview Content */,
 				0BF98F3D282ED6DB0029853C /* HomeScreenView.swift */,
-				0BF98F3F282EE9650029853C /* SwiftUIView.swift */,
+				0BF98F3F282EE9650029853C /* UserDetailView.swift */,
+				0BF98F43282F12B40029853C /* BooksView.swift */,
+				0B400E99282F17650024E2F6 /* CardView.swift */,
 			);
 			path = Octavo;
 			sourceTree = "<group>";
@@ -269,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B400E98282F13CA0024E2F6 /* Book.swift in Sources */,
+				0B400E9A282F17650024E2F6 /* CardView.swift in Sources */,
 				0BF98F18282ED4E00029853C /* Persistence.swift in Sources */,
 				0BF98F11282ED4DE0029853C /* ContentView.swift in Sources */,
-				0BF98F40282EE9650029853C /* SwiftUIView.swift in Sources */,
+				0BF98F40282EE9650029853C /* UserDetailView.swift in Sources */,
+				0BF98F44282F12B40029853C /* BooksView.swift in Sources */,
 				0BF98F0F282ED4DE0029853C /* OctavoApp.swift in Sources */,
 				0BF98F1B282ED4E00029853C /* Octavo.xcdatamodeld in Sources */,
 				0BF98F3E282ED6DB0029853C /* HomeScreenView.swift in Sources */,

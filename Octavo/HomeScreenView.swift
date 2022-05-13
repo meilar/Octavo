@@ -11,6 +11,7 @@ struct HomeScreenView: View {
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.purple, .black, .mint]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Octavo")
                     .font(.system(size:48, weight: .light, design: .serif))
