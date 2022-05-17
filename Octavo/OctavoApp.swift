@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct OctavoApp: App {
     let persistenceController = PersistenceController.shared
+    @State private var books = Book.sampleData
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                
+                HomeScreenView(books: $books)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

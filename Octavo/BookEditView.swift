@@ -67,7 +67,6 @@ struct BookEditView: View {
                 TextEditor(text: $data.userReview)
                 Text("").opacity(0).padding(.all, 8)
                 }
-                .shadow(radius:1)
             }
 
     }

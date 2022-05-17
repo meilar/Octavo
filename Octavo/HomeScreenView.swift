@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    
+    @Binding var books: [Book]
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.purple, .black, .mint]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -19,19 +22,23 @@ struct HomeScreenView: View {
                 HStack {
                     RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.white, lineWidth: 2)
                         .padding()
-                        .frame(width: 150, height: 100, alignment: .topLeading)
+                        .frame(width: 200, height: 100, alignment: .topLeading)
                         .overlay(
-                            Text("Reading Log")
-                                .foregroundColor(.white)
+                            NavigationLink(destination: BooksView(books: $books)) {
+                                Text("Book List")
+                                    .foregroundColor(.white)
+                            }
                         )
                 }
                 HStack {
                     RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.white, lineWidth: 2)
                         .padding()
-                        .frame(width: 150, height: 100, alignment: .topLeading)
+                        .frame(width: 200, height: 100, alignment: .topLeading)
                         .overlay(
-                            Text("Book List")
-                                .foregroundColor(.white)
+                            NavigationLink(destination: UserDetailView(books: $books)) {
+                                Text("Reading Statistics")
+                                    .foregroundColor(.white)
+                            }
                         )
                 }
             }
@@ -44,6 +51,6 @@ struct HomeScreenView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenView()
+        HomeScreenView(books: .constant(Book.sampleData))
     }
 }

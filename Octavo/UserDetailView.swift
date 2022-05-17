@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserDetailView: View {
+    
+    @Binding var books: [Book]
+    
     var body: some View {
         VStack{
             Spacer()
@@ -53,6 +56,6 @@ struct UserDetailView: View {
 
 struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDetailView()
+        UserDetailView(books: .constant(Book.sampleData))
     }
 }
