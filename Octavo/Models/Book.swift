@@ -75,8 +75,8 @@ extension Book {
 extension Book {
     static let sampleData: [Book] =
     [
-        Book(title: "The Sun Also Rises", authorFirst: "Ernest", authorLast: "Hemingway", genres: ["fiction", "men", "bullfighting"], pageCount: 230, dateRead: Date(timeIntervalSinceReferenceDate: 672055200), userRating: 3.5, userReview: "This book made me cry and want to order a split of champagne."),
-        Book(title: "A Tree Grows in Brooklyn", authorFirst: "Betty", authorLast: "Smith", genres: ["fiction", "new york", "alcoholism"], pageCount: 300, dateRead: Date(timeIntervalSinceReferenceDate: 658650600), userRating: 4.5, userReview: "This book reminded me of my mother."),
-        Book(title: "Where the Sidewalk Ends", authorFirst: "Shel", authorLast: "Silverstein", genres: ["poetry", "childrens", "sexy writers"], pageCount: 76, dateRead: Date(timeIntervalSinceReferenceDate: 176625000), userRating: 5.0, userReview: "This book made me wanna smoke some grass and watch The Electric Company.")
+        Book(title: "The Sun Also Rises", authorFirst: "Ernest", authorLast: "Hemingway", genres: ["Fiction", "Men", "Bullfighting"], pageCount: 230, dateRead: Date(timeIntervalSinceReferenceDate: 672055200), userRating: 3.5, userReview: "This book made me cry and want to order a split of champagne."),
+        Book(title: "A Tree Grows in Brooklyn", authorFirst: "Betty", authorLast: "Smith", genres: ["Fiction", "New York", "Alcoholism"], pageCount: 300, dateRead: Date(timeIntervalSinceReferenceDate: 658650600), userRating: 4.5, userReview: "This book reminded me of my mother."),
+        Book(title: "Where the Sidewalk Ends", authorFirst: "Shel", authorLast: "Silverstein", genres: ["Poetry", "Whimsy", "Sexy Writers"], pageCount: 76, dateRead: Date(timeIntervalSinceReferenceDate: 176625000), userRating: 5.0, userReview: "This book made me wanna smoke some grass and watch The Electric Company.")
     ]
 }

@@ -54,6 +54,11 @@ struct BookDetailView: View {
                 data = book.data
             }
         }
+        .sheet(isPresented: $isPresentingEditView) {
+            NavigationView {
+                BookEditView(data: $data)
+            }
+        }
         
     }
 }
