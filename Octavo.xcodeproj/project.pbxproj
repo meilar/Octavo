@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B400E98282F13CA0024E2F6 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B400E97282F13CA0024E2F6 /* Book.swift */; };
 		0B400E9A282F17650024E2F6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B400E99282F17650024E2F6 /* CardView.swift */; };
+		0BB8C0A2283310C400C2BBE0 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8C0A1283310C400C2BBE0 /* BookDetailView.swift */; };
 		0BF98F0F282ED4DE0029853C /* OctavoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F0E282ED4DE0029853C /* OctavoApp.swift */; };
 		0BF98F11282ED4DE0029853C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF98F10282ED4DE0029853C /* ContentView.swift */; };
 		0BF98F13282ED4E00029853C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF98F12282ED4E00029853C /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		0B400E97282F13CA0024E2F6 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		0B400E99282F17650024E2F6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0BB8C0A1283310C400C2BBE0 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		0BF98F0B282ED4DE0029853C /* Octavo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octavo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF98F0E282ED4DE0029853C /* OctavoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctavoApp.swift; sourceTree = "<group>"; };
 		0BF98F10282ED4DE0029853C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				0BF98F3F282EE9650029853C /* UserDetailView.swift */,
 				0BF98F43282F12B40029853C /* BooksView.swift */,
 				0B400E99282F17650024E2F6 /* CardView.swift */,
+				0BB8C0A1283310C400C2BBE0 /* BookDetailView.swift */,
 			);
 			path = Octavo;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				0B400E98282F13CA0024E2F6 /* Book.swift in Sources */,
 				0B400E9A282F17650024E2F6 /* CardView.swift in Sources */,
+				0BB8C0A2283310C400C2BBE0 /* BookDetailView.swift in Sources */,
 				0BF98F18282ED4E00029853C /* Persistence.swift in Sources */,
 				0BF98F11282ED4DE0029853C /* ContentView.swift in Sources */,
 				0BF98F40282EE9650029853C /* UserDetailView.swift in Sources */,

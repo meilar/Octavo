@@ -21,6 +21,10 @@ struct BooksView: View {
 
 struct BooksView_Previews: PreviewProvider {
     static var previews: some View {
-        BooksView(books: Book.sampleData)
+        Group {
+            BooksView(books: Book.sampleData)
+            BooksView(books: Book.sampleData)
+            BooksView(books: Book.sampleData)
+        }
     }
 }

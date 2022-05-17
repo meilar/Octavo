@@ -7,21 +7,76 @@
 
 import Foundation
 
-struct Book {
-    var id: Int
+struct Book: Identifiable {
+    var id: UUID
     var title: String
     var authorFirst: String
     var authorLast: String
-    var genres: [String]
+    var genres: [Genre]
     var pageCount: Int
+    var dateAdded: Date
     var dateRead: Date
+    var userRating: Double
+    var userReview: String
+
+    init(id: UUID = UUID(), title: String, authorFirst: String, authorLast: String, genres: [String], pageCount: Int, dateAdded: Date = Date(), dateRead: Date, userRating: Double, userReview: String) {
+        self.id = id
+        self.title = title
+        self.authorFirst = authorFirst
+        self.authorLast = authorLast
+        self.genres = genres.map { Genre(name: $0) }
+        self.pageCount = pageCount
+        self.dateAdded = dateAdded
+        self.dateRead = dateRead
+        self.userRating = userRating
+        self.userReview = userReview
+    }
 }
 
+
+extension Book {
+    struct Data {
+        var title: String = ""
+        var authorFirst: String = ""
+        var authorLast: String = ""
+        var genres: [Genre] = []
+        var pageCount: Int = 0
+        var dateRead: Date = Date(timeIntervalSinceReferenceDate: 1)
+        var userRating: Double = 0.0
+        var userReview: String = ""
+    }
+    
+    struct Genre: Identifiable {
+        let id: UUID
+        var name: String
+        
+        init(id: UUID = UUID(), name: String) {
+            self.id = id
+            self.name = name
+        }
+    }
+    
+    var data: Data {
+      Data(title:title, authorFirst:authorFirst, authorLast:authorLast, genres: genres, pageCount: pageCount, dateRead:dateRead, userRating:userRating, userReview: userReview)
+    }
+    
+    mutating func update(from data: Data) {
+        title = data.title
+        authorFirst = data.authorFirst
+        authorLast = data.authorLast
+        genres = data.genres
+        pageCount = data.pageCount
+        dateRead = data.dateRead
+        userRating = data.userRating
+        userReview = data.userReview
+    }
+}
+ 
 extension Book {
     static let sampleData: [Book] =
     [
-        Book(id: 1, title: "The Sun Also Rises", authorFirst: "Ernest", authorLast: "Hemingway", genres: ["fiction", "men", "bullfighting"], pageCount: 230, dateRead: Date(timeIntervalSinceReferenceDate: 672055200)),
-        Book(id: 2, title: "A Tree Grows in Brooklyn", authorFirst: "Betty", authorLast: "Smith", genres: ["fiction", "new york", "alcoholism"], pageCount: 300, dateRead: Date(timeIntervalSinceReferenceDate: 672045100)),
-        Book(id: 3, title: "Where the Sidewalk Ends", authorFirst: "Shel", authorLast: "Silverstein", genres: ["poetry", "childrens", "sexy writers"], pageCount: 76, dateRead: Date(timeIntervalSinceReferenceDate: 672022750))
+        Book(title: "The Sun Also Rises", authorFirst: "Ernest", authorLast: "Hemingway", genres: ["fiction", "men", "bullfighting"], pageCount: 230, dateRead: Date(timeIntervalSinceReferenceDate: 672055200), userRating: 3.5, userReview: "This book made me cry and want to order a split of champagne."),
+        Book(title: "A Tree Grows in Brooklyn", authorFirst: "Betty", authorLast: "Smith", genres: ["fiction", "new york", "alcoholism"], pageCount: 300, dateRead: Date(timeIntervalSinceReferenceDate: 658650600), userRating: 4.5, userReview: "This book reminded me of my mother."),
+        Book(title: "Where the Sidewalk Ends", authorFirst: "Shel", authorLast: "Silverstein", genres: ["poetry", "childrens", "sexy writers"], pageCount: 76, dateRead: Date(timeIntervalSinceReferenceDate: 176625000), userRating: 5.0, userReview: "This book made me wanna smoke some grass and watch The Electric Company.")
     ]
 }

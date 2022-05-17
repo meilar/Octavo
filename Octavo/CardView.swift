@@ -21,11 +21,11 @@ struct CardView: View {
                 .padding(.leading, 20)
                 .padding(.bottom, 5)
             HStack {
-                Label("\(book.dateRead.formatted(date: .long, time: .omitted))", systemImage: "calendar")
+                Label("\(book.dateRead.formatted(date: .numeric, time: .omitted))", systemImage: "calendar")
                     .font(.subheadline)
                     .padding(.leading, 20)
                 Spacer()
-                Label("\(book.pageCount) pages", systemImage: "book")
+                Label("\(book.pageCount) p.", systemImage: "book")
                     .font(.subheadline)
                     .padding(.trailing, 20)
             }
