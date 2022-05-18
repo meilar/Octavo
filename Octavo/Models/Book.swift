@@ -19,7 +19,16 @@ struct Book: Identifiable {
     var userRating: Double
     var userReview: String
 
-    init(id: UUID = UUID(), title: String, authorFirst: String, authorLast: String, genres: [String], pageCount: Int, dateAdded: Date = Date(), dateRead: Date, userRating: Double, userReview: String) {
+    init(id: UUID = UUID(),
+         title: String,
+         authorFirst: String,
+         authorLast: String,
+         genres: [String],
+         pageCount: Int,
+         dateAdded: Date = Date(),
+         dateRead: Date,
+         userRating: Double,
+         userReview: String) {
         self.id = id
         self.title = title
         self.authorFirst = authorFirst
@@ -35,17 +44,6 @@ struct Book: Identifiable {
 
 
 extension Book {
-    struct Data {
-        var title: String = ""
-        var authorFirst: String = ""
-        var authorLast: String = ""
-        var genres: [Genre] = []
-        var pageCount: Int = 0
-        var dateRead: Date = Date(timeIntervalSinceReferenceDate: 1)
-        var userRating: Double = 0.0
-        var userReview: String = ""
-    }
-    
     struct Genre: Identifiable {
         let id: UUID
         var name: String
@@ -56,8 +54,28 @@ extension Book {
         }
     }
     
+    struct Data {
+        var title: String = ""
+        var authorFirst: String = ""
+        var authorLast: String = ""
+        var genres: [Genre] = []
+        var pageCount: Int = 0
+        var dateAdded: Date = Date(timeIntervalSinceReferenceDate: 1)
+        var dateRead: Date = Date(timeIntervalSinceReferenceDate: 1)
+        var userRating: Double = 0.0
+        var userReview: String = ""
+    }
+      
     var data: Data {
-      Data(title:title, authorFirst:authorFirst, authorLast:authorLast, genres: genres, pageCount: pageCount, dateRead:dateRead, userRating:userRating, userReview: userReview)
+    Data(title:title,
+         authorFirst:authorFirst,
+         authorLast:authorLast,
+         genres: genres,
+         pageCount: pageCount,
+         dateAdded: dateAdded,
+         dateRead:dateRead,
+         userRating:userRating,
+         userReview: userReview)
     }
     
     mutating func update(from data: Data) {
@@ -69,6 +87,19 @@ extension Book {
         dateRead = data.dateRead
         userRating = data.userRating
         userReview = data.userReview
+    }
+    
+    init(data: Data) {
+        id = UUID()
+        title = data.title
+        authorFirst = data.authorFirst
+        authorLast = data.authorLast
+        genres = data.genres
+        pageCount = data.pageCount
+        dateRead = data.dateRead
+        userRating = data.userRating
+        userReview = data.userReview
+        dateAdded = Date()
     }
 }
  

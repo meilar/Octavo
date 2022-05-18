@@ -10,6 +10,15 @@ import SwiftUI
 struct UserDetailView: View {
     
     @Binding var books: [Book]
+
+//    @StateObject var userPagesRead: Int {
+//        var pages: Int = 0
+//        for book in $books {
+//            pages += book.pageCount
+//            
+//        }
+//        return pages
+//    }
     
     var body: some View {
         VStack{
