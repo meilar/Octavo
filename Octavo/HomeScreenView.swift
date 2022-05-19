@@ -13,31 +13,50 @@ struct HomeScreenView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.purple, .black, .mint]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+//            LinearGradient(gradient: Gradient(colors: [.purple, .black, .mint]), startPoint: .topLeading, endPoint: .bottomTrailing)
+//                .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Octavo")
-                    .font(.system(size:48, weight: .light, design: .serif))
-                    .foregroundColor(.white)
+                    .font(.system(size:48, weight: .semibold, design: .serif))
+                    .foregroundStyle(
+                    LinearGradient(
+                        colors: [.green, .blue],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    ))
+                Spacer()
+                Image("Logo").resizable().scaledToFit().frame(width: 300, height: 300, alignment: .center)
+                
+                
                 HStack {
-                    RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.white, lineWidth: 2)
+                    RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.green, lineWidth: 2)
                         .padding()
                         .frame(width: 200, height: 100, alignment: .topLeading)
                         .overlay(
                             NavigationLink(destination: BooksView(books: $books)) {
                                 Text("Book List")
-                                    .foregroundColor(.white)
+                                    .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [.green, .blue],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    ))
                             }
                         )
                 }
                 HStack {
-                    RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.white, lineWidth: 2)
+                    RoundedRectangle(cornerRadius:10, style: .continuous).stroke(Color.blue, lineWidth: 2)
                         .padding()
                         .frame(width: 200, height: 100, alignment: .topLeading)
                         .overlay(
                             NavigationLink(destination: UserDetailView(books: $books)) {
                                 Text("Reading Statistics")
-                                    .foregroundColor(.white)
+                                    .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [.green, .blue],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    ))
                             }
                         )
                 }
