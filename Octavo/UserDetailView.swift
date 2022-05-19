@@ -21,50 +21,62 @@ struct UserDetailView: View {
 //    }
     
     var body: some View {
-        VStack{
-            Spacer()
-            Text("Your Reading By the Numbers")
-                .font(.system(size:24, weight: .light, design: .serif))
-            Spacer()
-            Group {
-                Text("Pages")
-                    .font(.headline)
-                Text("240 all time pages read")
-                    .font(.subheadline)
-                Text("100 pages read this month")
-                    .font(.subheadline)
-                Text("240 pages: six month rolling average")
-                    .font(.subheadline)
+        List {
+            Section(header: Text("Reading Stats")) {
+                HStack {
+                    Label("100 pages read this month", systemImage: "hare")
+                }
+                HStack {
+                    Label("240 pages read all time", systemImage: "infinity.circle")
+                }
+                HStack {
+                    Label("Six month average: 240 pages", systemImage: "divide.square")
+                }
             }
-            Spacer()
-            Group {
-                Text("Books")
-                    .font(.headline)
-                Text("12 all time books read")
-                    .font(.subheadline)
-                Text("8 books read this month")
-                    .font(.subheadline)
-                Text("2 books: six month rolling average")
-                    .font(.subheadline)
+            Section(header: Text("Books Read")) {
+                HStack {
+                    Label("12 books read this month", systemImage: "book.closed")
+                }
+                HStack {
+                    Label("50 books read all time", systemImage: "books.vertical.circle")
+                }
+                HStack {
+                    Label("Six month average: 240 pages", systemImage: "divide.square")
+                }
             }
-            Spacer()
-            Group {
-                Text("Interests")
-                    .font(.headline)
-                Text("Favorite Genre: Sci-fi")
-                    .font(.subheadline)
-                Text("Highest Rated Author: Ursula LeGuin")
-                    .font(.subheadline)
-                Text("Lowest Rated Author: Christopher Paolini")
-                    .font(.subheadline)
+            Section(header: Text("Reading Interests")) {
+                HStack {
+                    Label("Favorite Genre: Sci-fi", systemImage: "atom")
+                }
+                HStack {
+                    Label("Highest Rated Author: Ursula LeGuin", systemImage: "person")
+                }
+                HStack {
+                    Label("Top Rated Book: The Dispossessed", systemImage: "1.square")
+                }
             }
-            Spacer()
         }
+        
     }
-}
+
+//            Group {
+//                Text("Interests")
+//                    .font(.headline)
+//                Text("Favorite Genre: Sci-fi")
+//                    .font(.subheadline)
+//                Text("Highest Rated Author: Ursula LeGuin")
+//                    .font(.subheadline)
+//                Text("Lowest Rated Author: Christopher Paolini")
+//                    .font(.subheadline)
+//            }
+//            Spacer()
+//        }
+//    }
+//}
 
 struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
         UserDetailView(books: .constant(Book.sampleData))
+        }
     }
 }
