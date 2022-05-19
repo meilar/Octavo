@@ -57,9 +57,22 @@ struct BookDetailView: View {
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
                 BookEditView(data: $data)
+                    .navigationTitle(book.title)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel") {
+                            isPresentingEditView = false
+                        }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Done") {
+                            isPresentingEditView = false
+                            book.update(from: data)
+                        }
+                    }
+                }
             }
         }
-        
     }
 }
 
