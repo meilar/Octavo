@@ -22,7 +22,7 @@ struct UserDetailView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Reading Stats")) {
+            Section(header: Text("Reading Speed")) {
                 HStack {
                     Label("100 pages read this month", systemImage: "hare")
                 }
@@ -44,7 +44,7 @@ struct UserDetailView: View {
                     Label("Six month average: 240 pages", systemImage: "divide.square")
                 }
             }
-            Section(header: Text("Reading Interests")) {
+            Section(header: Text("Your Interests")) {
                 HStack {
                     Label("Favorite Genre: Sci-fi", systemImage: "atom")
                 }
@@ -56,6 +56,7 @@ struct UserDetailView: View {
                 }
             }
         }
+        .navigationTitle("Your Reading Log")
         
     }
 

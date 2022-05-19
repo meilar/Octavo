@@ -66,8 +66,8 @@ struct BookDetailView: View {
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Done") {
-                            isPresentingEditView = false
                             book.update(from: data)
+                            isPresentingEditView = false
                         }
                     }
                 }

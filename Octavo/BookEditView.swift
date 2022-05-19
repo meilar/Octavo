@@ -16,6 +16,7 @@ struct BookEditView: View {
         Form {
             Section(header: Text("Book Details")) {
                 TextField("Title", text: $data.title)
+                    .autocapitalization(.words)
 
                 HStack {
                     TextField("AuthorFirst", text: $data.authorFirst)
@@ -25,7 +26,7 @@ struct BookEditView: View {
                 }
 
                 HStack {
-                    Text("Page Count")
+                    Text("Page Count:")
                     TextField("Pages", value: $data.pageCount, formatter: NumberFormatter())
                         .keyboardType(.decimalPad)
                 }
@@ -45,6 +46,7 @@ struct BookEditView: View {
                     withAnimation {
                         let genre = Book.Genre(name: newGenreName)
                         data.genres.append(genre)
+                        newGenreName = ""
                     }
                 }) {
                     Image(systemName: "plus.circle.fill")
