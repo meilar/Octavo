@@ -2,6 +2,10 @@
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)
 
+[![Video demonstration of app](http://img.youtube.com/vi/X37qn8r1G0o/0.jpg)](http://www.youtube.com/watch?v=X37qn8r1G0o "(Octavo Demo")
+
+
+
 ## About this project
 This was my capstone project at the end of my five-month, full-time [Epicodus](http://www.epicodus.com) bootcamp. I created a reading log iOS app inspired by Goodreads. Part of my goal was to get experience with the native iOS toolchain, so I wrote this app completely in SwiftUI.
 
